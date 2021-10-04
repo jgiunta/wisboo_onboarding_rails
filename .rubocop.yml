@@ -1,0 +1,100 @@
+#This is the configuration used to check the rubocop source code.
+require:
+  - rubocop-performance
+  - rubocop-rails
+AllCops:
+  TargetRubyVersion: 2.5.8
+  TargetRailsVersion: 4.2
+  Exclude:
+    - app/controllers/custom_devise/registrations_controller.rb # modified devise controller
+    - app/modules/payments_calculations.rb
+    - features/support/env.rb
+    - bin/*
+    - config/**/*
+    - coverage/**/*
+    - db/**/*
+    - lib/**/*
+    - spec/**/*
+    - test/**/*
+    - Capfile
+    - config.ru
+    - Gemfile
+    - Rakefile
+
+HasAndBelongsToMany:
+  Enabled: False
+
+Layout/LineLength:
+  Max: 99
+
+Metrics/AbcSize:
+  Enabled: False
+
+Metrics/ClassLength:
+  Enabled: False
+
+Metrics/BlockLength:
+  Enabled: False
+
+Metrics/ModuleLength:
+  Enabled: False
+
+Metrics/MethodLength:
+  Max: 12
+
+Style/Documentation:
+  Enabled: False
+
+Style/MultilineIfModifier:
+  Enabled: False
+
+Style/MethodMissingSuper:
+  Enabled: False
+
+Style/MissingRespondToMissing:
+  Enabled: False
+
+Style/DateTime:
+  Enabled: False
+
+Style/HashEachMethods:
+  Enabled: True
+
+# Enable when Ruby version > 2.5
+Style/HashTransformKeys:
+  Enabled: False
+
+Style/HashTransformValues:
+  Enabled: False
+
+Rails/Date:
+  Enabled: False
+
+Rails/DynamicFindBy:
+  Whitelist:
+    - find_by_public_id
+    - find_by_public_id!
+    - find_by_invitation_token
+    - find_by_range
+    - find_by_raw_token
+
+Rails/FindEach:
+  Enabled: False
+
+Rails/TimeZone:
+  Enabled: False
+
+Layout/MultilineMethodCallBraceLayout:
+  EnforcedStyle: same_line
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: False
+
+Lint/RaiseException:
+  Enabled: False
+
+Lint/StructNewOverride:
+  Enabled: True
+
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
