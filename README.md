@@ -11,15 +11,15 @@ Este proyecto está divido en un checklist de funcionalidades que debes desarrol
 - PostgreSQL 12
 - Redis
 
-Nota: Utilizamos versiones antiguas de Ruby y Ruby on Rails porque estamos usando las mismas versiones que el proyecto real. 
+Nota: Utilizamos versiones antiguas de Ruby y Ruby on Rails porque estamos usando las mismas versiones que el proyecto real.
 
 ## Contexto
 
 El objetivo es desarrollar una API Rest utilizando Ruby On Rails, la cual nos permita llevar el inventario de tienda online
 
-## Instalación 
+## Checklist Instalación 
 - Clonar proyecto
-- Instalar NVM
+- Instalar Rbenv
 - Instalar Ruby
 - Instalar PostgreSQL
 - Instalar Redis
@@ -29,15 +29,14 @@ El objetivo es desarrollar una API Rest utilizando Ruby On Rails, la cual nos pe
 
 ## Checklist de implementación
 
-1. Estructura del proyecto
-
-2. Agregar migraciones
+### 1. Agregar migraciones
 Se debe crear las migraciones para agregar las tablas faltantes.
+![mer](https://user-images.githubusercontent.com/5251813/135779800-f81d7967-30af-45fb-8e3b-526940ff5437.png)
 
-3. Agregar modelos
-Se deben agregar los modelos faltantes al proyecto.
+### 2. Agregar modelos
+Se deben agregar los modelos faltantes al proyecto, incluyendo validaciones y relaciones.
 
-### 4. Agregar endpoints CRUD para un producto digital
+### 3. Agregar endpoints CRUD para un producto digital
 
 Para este item es necesario que agregues 4 endpoints nuevos que permitan realizar acciones CRUD sobre el modelo Product. Estos endpoints son:
 
@@ -55,7 +54,11 @@ Código 200 - OK
       },
       products: [
         {
-
+          id: 1,
+          name: "",
+          description: "",
+          image: "",
+          quantity: 5
         },
         ...
       ]
@@ -69,6 +72,11 @@ Respuesta:
 Código 200 - OK
 ````
     {
+      id: 1,
+      name: "",
+      description: "",
+      image: "",
+      quantity: 5
     }
 ````
 
@@ -79,6 +87,11 @@ Respuesta:
 Código 201 - Created
 ````
     {
+      id: 1,
+      name: "",
+      description: "",
+      image: "",
+      quantity: 5
     }
 ````
 
@@ -89,6 +102,11 @@ Respuesta:
 Código 200 - OK
 ````
     {
+      id: 1,
+      name: "",
+      description: "",
+      image: "",
+      quantity: 5
     }
 ````
 
@@ -100,10 +118,10 @@ Código 204 - No content
 
 
 Para completar este item es necesario conocer:
- - Como crear rutas
- - Controladores ()
- - Policies ()
- - Queries ()
+ - Como crear rutas (https://wisboo.atlassian.net/wiki/spaces/AW/pages/404029484/Rutas+en+rails)
+ - Controladores (https://wisboo.atlassian.net/wiki/spaces/AW/pages/403963937/Controladores+en+Rails)
+ - Policies (https://wisboo.atlassian.net/wiki/spaces/AW/pages/1190330429/Policies)
+ - Queries (https://wisboo.atlassian.net/wiki/spaces/AW/pages/1190101026/Queries)
  - Serializadores (https://wisboo.atlassian.net/wiki/spaces/AW/pages/407011341/Serializers)
 
 ### 4. Agregar endpoint para agregar un producto al Wishlist:
@@ -123,8 +141,8 @@ Código 204 - No content
 Una vez completado el endpoint se debe regresar al endpoint para editar un producto y agregar la siguiente funcionalidad: Cuando se modifique la cantidad de items disponibles del producto y se pase de 0 a cualquier cantidad se debe disparar un email a los usuarios que tienen el producto en su wishlist para notificarles que está disponible.
 
 Para completar este item es necesario conocer:
- - Envío de emails ()
- - Trabajos asíncronos ()
+ - Envío de emails (https://wisboo.atlassian.net/wiki/spaces/AW/pages/1198260225/Env+o+de+emails)
+ - Trabajos asíncronos (https://wisboo.atlassian.net/wiki/spaces/AW/pages/1198260232/Trabajos+as+ncronos)
 
-6. Agregar tests para los endpoints
-
+### 5. Agregar tests para los endpoints
+Se deben crean tests para al menos 2 endpoints, puedes usar esta guía para aprender más de rspec y tests unitarios. https://wisboo.atlassian.net/wiki/spaces/AW/pages/416874526/RSpec+101
