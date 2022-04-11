@@ -8,14 +8,19 @@ gem 'activeresource'
 # Upgrade only after moving to rails 5
 gem 'pg', '~>0.20.0'
 # needs upgrade
-gem 'json', github: 'flori/json', branch: 'v1.8'
+gem 'json', git: 'https://github.com/flori/json', branch: 'v1.8'
 
 gem 'slim-rails', github: 'slim-template/slim-rails'
 gem 'active_model_serializers', '~>0.9.0'
 
 # queues and cron-jobs
 gem 'sidekiq', '~> 5.0'
-gem 'pundit', github: 'elabs/pundit'
+
+# Permissions
+gem 'pundit'
+
+# Pagination
+gem 'nokogiri'
 gem 'kaminari'
 
 # Use ActiveModel has_secure_password

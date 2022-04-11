@@ -1,18 +1,4 @@
 GIT
-  remote: git://github.com/elabs/pundit.git
-  revision: 478b7b11c43b7267e92612f90ac16f4c7439ac9c
-  specs:
-    pundit (2.1.1)
-      activesupport (>= 3.0.0)
-
-GIT
-  remote: git://github.com/flori/json.git
-  revision: 7f4cfd853f2c919d854fb95548a19980feff17e8
-  branch: v1.8
-  specs:
-    json (1.8.6)
-
-GIT
   remote: git://github.com/guard/guard-livereload.git
   revision: 75c2617c99ad6d000b899dbbe58b6d9aaff74227
   specs:
@@ -47,6 +33,13 @@ GIT
     guard-rubocop (1.5.0)
       guard (~> 2.0)
       rubocop (< 2.0)
+
+GIT
+  remote: https://github.com/flori/json
+  revision: 7f4cfd853f2c919d854fb95548a19980feff17e8
+  branch: v1.8
+  specs:
+    json (1.8.6)
 
 GEM
   remote: https://rubygems.org/
@@ -198,6 +191,8 @@ GEM
       binding_of_caller (>= 0.7)
       pry (>= 0.9.11)
     public_suffix (4.0.6)
+    pundit (2.2.0)
+      activesupport (>= 3.0.0)
     racc (1.5.2)
     rack (1.6.13)
     rack-protection (2.1.0)
@@ -326,12 +321,13 @@ DEPENDENCIES
   json!
   kaminari
   letter_opener
+  nokogiri
   pg (~> 0.20.0)
   pry (= 0.12.2)
   pry-byebug (= 3.7.0)
   pry-rails (= 0.3.9)
   pry-stack_explorer
-  pundit!
+  pundit
   rails (= 4.2.11.1)
   responders (>= 2.0)
   rspec-rails
