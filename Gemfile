@@ -10,7 +10,7 @@ gem 'pg', '~>0.20.0'
 # needs upgrade
 gem 'json', git: 'https://github.com/flori/json', branch: 'v1.8'
 
-gem 'slim-rails', github: 'slim-template/slim-rails'
+gem 'slim-rails'
 gem 'active_model_serializers', '~>0.9.0'
 
 # queues and cron-jobs
@@ -36,9 +36,9 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'guard', '2.15.0'
-  gem 'guard-rspec', github: 'guard/guard-rspec'
-  gem 'guard-livereload', github: 'guard/guard-livereload'
-  gem 'guard-rubocop', github: 'yujinakayama/guard-rubocop'
+  gem 'guard-rspec', git: 'https://github.com/guard/guard-rspec'
+  gem 'guard-livereload', git: 'https://github.com/guard/guard-livereload'
+  gem 'guard-rubocop', git: 'https://github.com/rubocop/guard-rubocop'
   gem 'letter_opener'
 end
 

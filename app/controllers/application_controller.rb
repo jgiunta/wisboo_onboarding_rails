@@ -2,7 +2,7 @@
 
 class ApplicationController < ActionController::Base
   include ActionController::Serialization
-  include Pundit
+  include Pundit::Authorization
   include Authentication
 
   protect_from_forgery with: :null_session
