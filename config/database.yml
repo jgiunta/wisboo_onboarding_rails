@@ -4,6 +4,7 @@ development:
   database: onboarding_wisboo_development
   username: wisboo
   password: wisboo
+  host: 'localhost'
 
 test:
   adapter: postgresql
@@ -11,4 +12,4 @@ test:
   database: onboarding_wisboo_test
   username: wisboo
   password: wisboo
-
+  host: 'localhost'

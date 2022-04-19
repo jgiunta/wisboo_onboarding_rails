@@ -2,6 +2,8 @@
 
 class User < ActiveRecord::Base
   has_secure_password
+  has_many :user_products, dependent: :destroy
+  has_many :products, through: :user_products
 
   validates :name, :email, :last_name, :role, presence: true
   validates :email, presence: true, uniqueness: true,

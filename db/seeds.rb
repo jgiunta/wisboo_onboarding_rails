@@ -24,3 +24,11 @@ User.create(
   last_name: 'Dibenedetto',
   email: 'fede@email.com',
   password: 'password')
+# Products
+10.times do
+  Product.create(
+    name: Faker::Book.title,
+    image: Faker::LoremFlickr.image,
+    quantity: 1,
+    description: Faker::Lorem.sentence(5))
+end
